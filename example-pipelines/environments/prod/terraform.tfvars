@@ -1,4 +1,4 @@
-project_id = "jenkins-ros-terraform"
+project_id = "terraform-jenkins-ros"
 environment = "prod"
 subnet1_region = "us-central1"
 subnet1_zone = "us-central1-a"

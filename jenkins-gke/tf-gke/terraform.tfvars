@@ -1,7 +1,7 @@
 
 
-project_id = "jenkins-ros-terraform"
-tfstate_gcs_backend = "jenkins-ros-terraform-tfstate"
+project_id = "terraform-jenkins-ros"
+tfstate_gcs_backend = "terraform-jenkins-ros-tfstate"
 region = "us-east4"
 zones = ["us-east4-a"]
 ip_range_pods_name = "ip-range-pods"
