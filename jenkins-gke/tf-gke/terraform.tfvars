@@ -1,7 +1,7 @@
 
 
-project_id = "terraform-jenkins-ros"
-tfstate_gcs_backend = "terraform-jenkins-ros-tfstate"
+project_id = "magazino-309310"
+tfstate_gcs_backend = "magazino-309310-tfstate"
 region = "us-east4"
 zones = ["us-east4-a"]
 ip_range_pods_name = "ip-range-pods"

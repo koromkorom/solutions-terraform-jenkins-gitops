@@ -15,7 +15,7 @@
 
 terraform {
   backend "gcs" {
-    bucket = "terraform-jenkins-ros-tfstate"
+    bucket = "magazino-309310-tfstate"
     prefix = "env/prod"
   }
 }

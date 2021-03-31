@@ -1,4 +1,4 @@
-project_id = "terraform-jenkins-ros"
+project_id = "magazino-309310"
 environment = "dev"
 subnet1_region = "us-central1"
 subnet1_zone = "us-central1-a"

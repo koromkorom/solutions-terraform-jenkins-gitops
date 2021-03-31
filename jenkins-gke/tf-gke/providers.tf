@@ -18,18 +18,17 @@
   Google Provider Configuration
  *****************************************/
 provider "google" {
-  version = "~>  3.1"
+  # Configuration options
 }
 
 provider "google-beta" {
-  version = "~>  3.1"
+  # Configuration options
 }
 
 /*****************************************
   Kubernetes provider configuration
  *****************************************/
 provider "kubernetes" {
-  version                = "~> 1.10"
   load_config_file       = false
   host                   = module.jenkins-gke.endpoint
   token                  = data.google_client_config.default.access_token

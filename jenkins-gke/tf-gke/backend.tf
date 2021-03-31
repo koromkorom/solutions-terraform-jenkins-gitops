@@ -15,8 +15,26 @@
  */
 
 terraform {
+  required_providers {
+    google = {
+      source = "hashicorp/google"
+      version = "3.62.0"
+    }
+    google-beta = {
+      source = "hashicorp/google-beta"
+      version = "3.62.0"
+    }
+    kubernetes = {
+      source = "hashicorp/kubernetes"
+      version = "2.0.3"
+    }
+    helm = {
+      source = "hashicorp/helm"
+      version = "2.0.3"
+    }
+  }
   backend "gcs" {
-    bucket = "terraform-jenkins-ros-tfstate"
+    bucket = "magazino-309310-tfstate"
     prefix = "jenkins"
   }
 }

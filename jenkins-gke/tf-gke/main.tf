@@ -20,7 +20,7 @@
  *****************************************/
 module "enables-google-apis" {
   source  = "terraform-google-modules/project-factory/google//modules/project_services"
-  version = "6.0.0"
+  version = "10.3.0"
 
   project_id = var.project_id
 
@@ -41,7 +41,7 @@ module "enables-google-apis" {
  *****************************************/
 module "jenkins-vpc" {
   source  = "terraform-google-modules/network/google"
-  version = "~> 2.0"
+  version = "3.2.0"
 
   project_id   = module.enables-google-apis.project_id
   network_name = var.network_name
@@ -73,7 +73,7 @@ module "jenkins-vpc" {
  *****************************************/
 module "jenkins-gke" {
   source                   = "terraform-google-modules/kubernetes-engine/google//modules/beta-public-cluster/"
-  version                  = "~> 7.0"
+  version                  = "14.0.1"
   project_id               = module.enables-google-apis.project_id
   name                     = "jenkins"
   regional                 = false
@@ -115,7 +115,7 @@ resource "google_project_iam_member" "gke" {
  *****************************************/
 module "workload_identity" {
   source              = "terraform-google-modules/kubernetes-engine/google//modules/workload-identity"
-  version             = "~> 7.0"
+  version             = "14.0.1"
   project_id          = module.enables-google-apis.project_id
   name                = "jenkins-wi-${module.jenkins-gke.name}"
   namespace           = "default"
